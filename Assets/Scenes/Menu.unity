@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71d63b3cfdfb6640a7477247f413bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nameScene: Game
   _cameraView: {fileID: 2008761477}
 --- !u!20 &2008761475 stripped
 Camera:
@@ -387,11 +388,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1312231269}
+    - target: {fileID: 517760484807757576, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 922887744872656572, guid: 12a436a45d92d594db4962033d97978b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1312231269}
+    - target: {fileID: 922887744872656572, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3969296606241887349, guid: 12a436a45d92d594db4962033d97978b,
         type: 3}
       propertyPath: m_LocalPosition.x

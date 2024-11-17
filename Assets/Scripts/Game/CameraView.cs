@@ -37,7 +37,6 @@ public class CameraView : MonoBehaviour
                 break;
             }
             _time += Time.deltaTime;
-            Debug.Log(_time);
             await UniTask.Yield();
         }
         Debug.Log(true);
