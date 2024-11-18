@@ -1,4 +1,4 @@
 public enum TypePCSocket
 {
-    CPU, videocard, RAM, powerSupply, motherboard, hardDrive, SSD
+    CPU, videocard, RAM, powerSupply, motherboard, hardDrive, SSD,Socket,CaseGlass, CPUFan
 }
