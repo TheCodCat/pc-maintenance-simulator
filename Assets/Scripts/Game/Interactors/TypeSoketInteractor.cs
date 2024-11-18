@@ -5,7 +5,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class TypeSoketInteractor : XRSocketInteractor
 {
+    [SerializeField] private LevelController _levelController;
+    [Header("Òåã ïğèñîåäèíåíèÿ")]
     [SerializeField] private TypePCSocket _typePCSocket;
+    [Header("Óñëîâèÿ çàìåíû")]
+    [SerializeField] private PCXRGrapInteractable _requiredÑomponent;
 
     public override bool CanHover(IXRHoverInteractable interactable)
     {
@@ -16,6 +20,10 @@ public class TypeSoketInteractor : XRSocketInteractor
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
         PCXRGrapInteractable component = interactable.transform.GetComponent<PCXRGrapInteractable>();
+        if (component.Equals(_requiredÑomponent))
+        {
+            _levelController.FixComponent();
+        }
         return base.CanSelect(interactable) && component.GetSocket().Equals(_typePCSocket);
     }
 }

@@ -7,6 +7,7 @@ public class LoadLevel : MonoBehaviour
     private void Start()
     {
         GameObject[] activeLevels = _levels.Where(x => x.gameObject.activeSelf).ToArray();
+        Debug.Log(activeLevels.Length);
         if(activeLevels.Length is not 0)
         {
             foreach (var item in activeLevels)
@@ -15,6 +16,6 @@ public class LoadLevel : MonoBehaviour
             }
         }
 
-        _levels[StaticParametrs.IndexLevel].SetActive(true);
+        _levels[StaticParametrs.IndexLevel].gameObject.SetActive(true);
     }
 }
