@@ -7,6 +7,9 @@ public class PCXRGrapInteractable : XRGrabInteractable
 {
     [SerializeField] private TypePCSocket _socket;
     [SerializeField] private Transform _panel;
+    [Header("Звуки подбора и выброса")]
+    [SerializeField] private AudioClip _audioClipSelect;
+    [SerializeField] private AudioClip _audioClipDeselect;
     private Transform _target;
 
     private CancellationTokenSource _cancellationTokenSource;
@@ -18,7 +21,7 @@ public class PCXRGrapInteractable : XRGrabInteractable
         return _socket;
     }
 
-    public async void OnSelected(ActivateEventArgs selectEnterEventArgs)
+    public async void OnActivate(ActivateEventArgs selectEnterEventArgs)
     {
         _panel.gameObject.SetActive(true);
         _cancellationTokenSource = new CancellationTokenSource();
@@ -27,10 +30,19 @@ public class PCXRGrapInteractable : XRGrabInteractable
         _target = Player.Instance.GetCamera();
         await LookAtPlayer(_cancellationToken);
     }
-    public void OnDeselected(DeactivateEventArgs selectEnterEventArgs)
+    public void OnDeactivate(DeactivateEventArgs selectEnterEventArgs)
     {
         _panel.gameObject.SetActive(false);
         _cancellationTokenSource.Cancel();
+    }
+
+    public void OnSelected(SelectEnterEventArgs selectEnterEventArgs)
+    {
+        AudioSource.PlayClipAtPoint(_audioClipSelect,transform.position,0.2f);
+    }
+    public void OnDeSelected(SelectExitEventArgs selectExitEventArgs)
+    {
+        AudioSource.PlayClipAtPoint(_audioClipDeselect, transform.position, 0.2f);
     }
 
     private async UniTask LookAtPlayer(CancellationToken cancellationToken)
