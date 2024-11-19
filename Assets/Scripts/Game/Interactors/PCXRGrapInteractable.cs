@@ -38,6 +38,7 @@ public class PCXRGrapInteractable : XRGrabInteractable
 
     public void OnSelected(SelectEnterEventArgs selectEnterEventArgs)
     {
+        Debug.Log($"asd {gameObject.name}");
         AudioSource.PlayClipAtPoint(_audioClipSelect,transform.position,0.2f);
     }
     public void OnDeSelected(SelectExitEventArgs selectExitEventArgs)
