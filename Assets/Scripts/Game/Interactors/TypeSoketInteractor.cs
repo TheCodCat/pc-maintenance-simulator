@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -11,6 +12,8 @@ public class TypeSoketInteractor : XRSocketInteractor
     [Header("”ÒÎÓ‚Ëˇ Á‡ÏÂÌ˚")]
     [SerializeField] private PCXRGrapInteractable _required—omponent;
 
+    private PCXRGrapInteractable _current—omponent;
+
     public override bool CanHover(IXRHoverInteractable interactable)
     {
         PCXRGrapInteractable component = interactable.transform.GetComponent<PCXRGrapInteractable>();
@@ -19,11 +22,24 @@ public class TypeSoketInteractor : XRSocketInteractor
 
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
-        PCXRGrapInteractable component = interactable.transform.GetComponent<PCXRGrapInteractable>();
-        if (component.Equals(_required—omponent))
+        _current—omponent = interactable.transform.GetComponent<PCXRGrapInteractable>();
+
+        return base.CanSelect(interactable) && _current—omponent.GetSocket().Equals(_typePCSocket);
+    }
+    public void FixSelectable(SelectEnterEventArgs selectEnterEventArgs)
+    {
+        if (_required—omponent.Equals(_current—omponent))
         {
+            Debug.Log($"asdasd {gameObject.name}");
             _levelController.FixComponent();
         }
-        return base.CanSelect(interactable) && component.GetSocket().Equals(_typePCSocket);
+    }
+    public void UnFixSelectable(SelectExitEventArgs selectExitEventArgs)
+    {
+        if (_required—omponent.Equals(_current—omponent))
+        {
+            Debug.Log($"asdasd {gameObject.name}");
+            _levelController.UnFixComponent();
+        }
     }
 }

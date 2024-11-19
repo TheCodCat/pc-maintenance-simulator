@@ -22,8 +22,14 @@ public class LevelController : MonoBehaviour
     {
         fixErrors++;
         fixErrors = Mathf.Clamp(fixErrors,0, _errors.Length);
+        OnFixedChange?.Invoke(fixErrors);
     }
-
+    public void UnFixComponent()
+    {
+        fixErrors--;
+        fixErrors = Mathf.Clamp(fixErrors, 0, _errors.Length);
+        OnFixedChange?.Invoke(fixErrors);
+    }
     public int GetCountErrors()
     {
         return _errors.Length;
