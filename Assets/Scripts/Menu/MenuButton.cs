@@ -6,6 +6,7 @@ using System;
 public class MenuButton : MonoBehaviour
 {
     [SerializeField] private string _nameScene;
+    [SerializeField] private AudioClip _audioClip;
     public async void LevelLoad(int indexlevel)
     {
         StaticParametrs.IndexLevel = indexlevel;
@@ -14,5 +15,9 @@ public class MenuButton : MonoBehaviour
     public async void ResetToMenu(string name)
     {
         await SceneManager.LoadSceneAsync(name).ToUniTask();
+    }
+    public void AudioSelect()
+    {
+        AudioSource.PlayClipAtPoint(_audioClip,transform.position,0.3f);
     }
 }
