@@ -15,7 +15,6 @@ public class LevelController : MonoBehaviour
         set
         {
             _fixErrors = value;
-            OnFixedChange?.Invoke(value);
         }
     }
     public void FixComponent()

@@ -502,10 +502,58 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2889543232469990800}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: onSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2889543232469990800}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: FixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2889543232469990800}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: OnDeselected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2889543232469990800}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: UnFixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_OnHoverEntered:
@@ -533,6 +581,8 @@ MonoBehaviour:
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _levelController: {fileID: 5663697157318258843}
   _typePCSocket: 9
+  "_lastSelectable\u0421omponent": {fileID: 3664823215064539153}
+  _isSetup: 0
   "_required\u0421omponent": {fileID: 2991871870629075781}
   _required: 0
 --- !u!65 &5815139272167547555
@@ -1123,7 +1173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93c6d64e0b301d4d9369983e300431e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _errors: []
+  _errors:
+  - {fileID: 3664823215064539153}
   _fixErrors: 0
 --- !u!1 &2172726335531471327
 GameObject:
@@ -1689,6 +1740,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6603954650784900751}
         m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: onSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6603954650784900751}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
         m_MethodName: FixSelectable
         m_Mode: 0
         m_Arguments:
@@ -1702,6 +1765,18 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6603954650784900751}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: OnDeselected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6603954650784900751}
         m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
         m_MethodName: UnFixSelectable
@@ -1741,6 +1816,8 @@ MonoBehaviour:
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _levelController: {fileID: 5663697157318258843}
   _typePCSocket: 1
+  "_lastSelectable\u0421omponent": {fileID: 0}
+  _isSetup: 0
   "_required\u0421omponent": {fileID: 0}
   _required: 0
 --- !u!1 &2969668783962870730
@@ -2003,6 +2080,8 @@ MonoBehaviour:
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _levelController: {fileID: 5663697157318258843}
   _typePCSocket: 8
+  "_lastSelectable\u0421omponent": {fileID: 0}
+  _isSetup: 0
   "_required\u0421omponent": {fileID: 1321238955307887338}
   _required: 0
 --- !u!65 &6999765517178431985
@@ -2589,10 +2668,58 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3664823215064539153}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: onSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3664823215064539153}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: FixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3664823215064539153}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: OnDeselected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3664823215064539153}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: UnFixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_OnHoverEntered:
@@ -2620,8 +2747,10 @@ MonoBehaviour:
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _levelController: {fileID: 5663697157318258843}
   _typePCSocket: 0
+  "_lastSelectable\u0421omponent": {fileID: 0}
+  _isSetup: 1
   "_required\u0421omponent": {fileID: 1928930990434534942}
-  _required: 0
+  _required: 1
 --- !u!65 &1162836494346739855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3046,10 +3175,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 891366701473549793}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: FixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 891366701473549793}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: UnFixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_OnHoverEntered:
@@ -3077,6 +3230,8 @@ MonoBehaviour:
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _levelController: {fileID: 5663697157318258843}
   _typePCSocket: 4
+  "_lastSelectable\u0421omponent": {fileID: 0}
+  _isSetup: 0
   "_required\u0421omponent": {fileID: 899846818685690184}
   _required: 0
 --- !u!65 &3469612931290652776
@@ -3494,10 +3649,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 400052564096529922}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: FixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 400052564096529922}
+        m_TargetAssemblyTypeName: TypeSoketInteractor, Assembly-CSharp
+        m_MethodName: UnFixSelectable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_OnHoverEntered:
@@ -3525,6 +3704,8 @@ MonoBehaviour:
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _levelController: {fileID: 5663697157318258843}
   _typePCSocket: 3
+  "_lastSelectable\u0421omponent": {fileID: 0}
+  _isSetup: 0
   "_required\u0421omponent": {fileID: 172788293060773477}
   _required: 0
 --- !u!65 &1067663211028116624

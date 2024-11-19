@@ -10,8 +10,7 @@ public class TypeSoketInteractor : XRSocketInteractor
     [Header("Тег присоединения")]
     [SerializeField] private TypePCSocket _typePCSocket;
     [Header("Зависящие компоненты")]
-    [SerializeField] private TypeSoketInteractor _lastSelectableСomponent;
-    [SerializeField, Tooltip("Нужно ли установить другой компонент для установки")] private bool _isSelectable;
+    [SerializeField, Tooltip("Если НЕ null, то замена нужна")] private TypeSoketInteractor _lastSelectableСomponent;
     [SerializeField] private bool _isSetup;
     [Header("Условия замены")]
     [SerializeField] private PCXRGrapInteractable _requiredСomponent;
