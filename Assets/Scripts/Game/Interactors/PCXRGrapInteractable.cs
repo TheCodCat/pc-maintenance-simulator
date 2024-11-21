@@ -10,6 +10,7 @@ public class PCXRGrapInteractable : XRGrabInteractable
     [Header("Звуки подбора и выброса")]
     [SerializeField] private AudioClip _audioClipSelect;
     [SerializeField] private AudioClip _audioClipDeselect;
+    [SerializeField] private AudioSource _audioSource;
     private Transform _target;
 
     private CancellationTokenSource _cancellationTokenSource;
@@ -38,12 +39,13 @@ public class PCXRGrapInteractable : XRGrabInteractable
 
     public void OnSelected(SelectEnterEventArgs selectEnterEventArgs)
     {
-        Debug.Log($"asd {gameObject.name}");
-        AudioSource.PlayClipAtPoint(_audioClipSelect,transform.position,0.2f);
+        _audioSource.clip = _audioClipSelect;
+        _audioSource.Play();
     }
     public void OnDeSelected(SelectExitEventArgs selectExitEventArgs)
     {
-        AudioSource.PlayClipAtPoint(_audioClipDeselect, transform.position, 0.2f);
+        _audioSource.clip = _audioClipDeselect;
+        _audioSource.Play();
     }
 
     private async UniTask LookAtPlayer(CancellationToken cancellationToken)

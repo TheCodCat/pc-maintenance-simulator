@@ -10,8 +10,8 @@ public class TypeSoketInteractor : XRSocketInteractor
     [Header("Тег присоединения")]
     [SerializeField] private TypePCSocket _typePCSocket;
     [Header("Зависящие компоненты")]
-    [SerializeField, Tooltip("Если НЕ null, то замена нужна")] private TypeSoketInteractor _lastSelectableСomponent;
-    [SerializeField] private bool _isSetup;
+    [SerializeField, Tooltip("Компонент зависит от выбранного компонента")] private TypeSoketInteractor _lastSelectableСomponent;
+    private bool _isSetup;
     [Header("Условия замены")]
     [SerializeField] private PCXRGrapInteractable _requiredСomponent;
     [SerializeField, Tooltip("Нужна ли замена да/нет")] protected bool _required;
@@ -47,10 +47,20 @@ public class TypeSoketInteractor : XRSocketInteractor
     public void onSelected(SelectEnterEventArgs selectEnterEventArgs)
     {
         IsSetup = true;
+
+        if(selectEnterEventArgs.interactableObject.transform.TryGetComponent(out IActivated component))
+        {
+            component.Activate();
+        }
     }
     public void OnDeselected(SelectExitEventArgs selectExitEventArgs)
     {
         IsSetup = false;
+
+        if (selectExitEventArgs.interactableObject.transform.TryGetComponent(out IActivated component))
+        {
+            component.Deactivate();
+        }
     }
     public void FixSelectable(SelectEnterEventArgs selectEnterEventArgs)
     {
@@ -70,4 +80,5 @@ public class TypeSoketInteractor : XRSocketInteractor
             _levelController.UnFixComponent();
         }
     }
+
 }
