@@ -38,4 +38,9 @@ public class LevelController : MonoBehaviour
     {
         return _errors.Length;
     }
+
+    public void SetWin()
+    {
+        _isWin = true;
+    }
 }

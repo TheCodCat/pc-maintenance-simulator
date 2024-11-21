@@ -22,4 +22,9 @@ public class LoadLevel : MonoBehaviour
     {
         _currentLevel.FixUpdateCount();
     }
+    public void SetWinButton()
+    {
+        if(_currentLevel.GetCountErrors().Equals(_currentLevel.fixErrors))
+            _currentLevel.SetWin();
+    }
 }
