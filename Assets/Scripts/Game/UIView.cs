@@ -7,14 +7,11 @@ using UnityEngine.UI;
 public class UIView : MonoBehaviour
 {
     [SerializeField] private Text _errorsText;
-    [SerializeField] private LevelController _levelController;
     [SerializeField] private int _errorsCount;
 
     private void OnEnable()
     {
         LevelController.OnFixedChange += UpdateTextErrors;
-
-        UpdateTextErrors();
     }
     private void OnDisable()
     {
@@ -23,7 +20,7 @@ public class UIView : MonoBehaviour
 
     private void UpdateTextErrors(int fix = 0)
     {
-        _errorsText.text = $"{fix}/{_levelController.GetCountErrors()}";
+        _errorsText.text = $"{fix}/{LoadLevel.Instance.currentLevel.GetCountErrors()}";
     }
 
 }

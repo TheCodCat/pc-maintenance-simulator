@@ -3,19 +3,23 @@ using UnityEngine;
 
 public class LoadLevel : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _levels;
+    public static LoadLevel Instance;
+    [SerializeField] private LevelController[] _levels;
+    [SerializeField] private LevelController _currentLevel;
+    public LevelController currentLevel => _currentLevel;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
-        GameObject[] activeLevels = _levels.Where(x => x.gameObject.activeSelf).ToArray();
-        Debug.Log(activeLevels.Length);
-        if(activeLevels.Length is not 0)
-        {
-            foreach (var item in activeLevels)
-            {
-                item.gameObject.SetActive(false);
-            }
-        }
-
         _levels[StaticParametrs.IndexLevel].gameObject.SetActive(true);
+        _currentLevel = _levels[StaticParametrs.IndexLevel];
+    }
+
+    public void UpdateFixErrors()
+    {
+        _currentLevel.FixUpdateCount();
     }
 }

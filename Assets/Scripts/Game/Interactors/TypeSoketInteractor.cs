@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class TypeSoketInteractor : XRSocketInteractor
 {
-    [SerializeField] private LevelController _levelController;
     [Header("Òåã ïğèñîåäèíåíèÿ")]
     [SerializeField] private TypePCSocket _typePCSocket;
     [Header("Çàâèñÿùèå êîìïîíåíòû")]
@@ -68,7 +67,7 @@ public class TypeSoketInteractor : XRSocketInteractor
         if (_requiredÑomponent.Equals(_currentÑomponent))
         {
             Debug.Log($"asdasd {gameObject.name}");
-            _levelController.FixComponent();
+            LoadLevel.Instance.currentLevel.FixComponent();
         }
     }
     public void UnFixSelectable(SelectExitEventArgs selectExitEventArgs)
@@ -77,7 +76,7 @@ public class TypeSoketInteractor : XRSocketInteractor
         if (_requiredÑomponent.Equals(_currentÑomponent))
         {
             Debug.Log($"asdasd {gameObject.name}");
-            _levelController.UnFixComponent();
+            LoadLevel.Instance.currentLevel.UnFixComponent();
         }
     }
 
