@@ -49,7 +49,7 @@ public class LoadSticker : MonoBehaviour
         Debug.Log("Начинаю загрузку уровня");
         await UniTask.Delay(TimeSpan.FromSeconds(3f));
 
-        await LoadStickerAsync(_indexLevel, _cancellationToken);
+        await LoadStickerExitAsync( _cancellationToken);
     }
     public void StopLoadStickerExit(SelectExitEventArgs selectExitEventArgs)
     {
