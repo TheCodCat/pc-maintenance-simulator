@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc50c42346bdf8845a668dc8eb4380ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SavesWinKey: 00000000
+  SavesOpenKey: 0100000000
 --- !u!4 &1006667947
 Transform:
   m_ObjectHideFlags: 0
@@ -276,6 +276,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018187289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6363707880912760619, guid: 12a436a45d92d594db4962033d97978b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8210756028816516947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1116867762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2192952544956470851, guid: bab30513a7f97924183225991516c52b,
@@ -481,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelButtons:
+  - {fileID: 1018187289}
   - {fileID: 1925783164}
   - {fileID: 163888919}
   - {fileID: 1689802613}
@@ -771,6 +784,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23172955571499639, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: _indexLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1123277806812865565, guid: 12a436a45d92d594db4962033d97978b,
         type: 3}
       propertyPath: m_KeepSelectedTargetValid
@@ -780,6 +798,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StartingSelectedInteractable
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031859677464984324, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380972818977385151, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3969296606241887349, guid: 12a436a45d92d594db4962033d97978b,
         type: 3}
@@ -831,10 +859,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5157481047716007959, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker1
+      objectReference: {fileID: 0}
     - target: {fileID: 5615436234315610408, guid: 12a436a45d92d594db4962033d97978b,
         type: 3}
       propertyPath: m_Name
       value: Einvairoment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320911030322935372, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8203353340396891888, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107244310572654166, guid: 12a436a45d92d594db4962033d97978b,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

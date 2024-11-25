@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class GameDataController : MonoBehaviour
 {
     public static GameDataController instance;
-    [SerializeField] private bool[] SavesWinKey;
+    [SerializeField] private bool[] SavesOpenKey;
 
     private void Awake()
     {
@@ -21,13 +21,13 @@ public class GameDataController : MonoBehaviour
 
     private void Start()
     {
-        SavesWinKey = LoadWin();
+        SavesOpenKey = LoadWin();
     }
     public void SaveWin()
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream fileStream = File.Create($"C:/Users/Public/saveload.gd");
-        bf.Serialize(fileStream, SavesWinKey);
+        bf.Serialize(fileStream, SavesOpenKey);
         fileStream.Close();
     }
     public bool[] LoadWin()
@@ -43,7 +43,12 @@ public class GameDataController : MonoBehaviour
         else
         {
             SaveWin();
-            return new bool[SavesWinKey.Length];
+            return SavesOpenKey;
         }
+    }
+
+    public void SetWinLvl(int index)
+    {
+        SavesOpenKey[index] = true;
     }
 }

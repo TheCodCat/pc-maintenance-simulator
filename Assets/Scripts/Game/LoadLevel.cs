@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -22,9 +23,12 @@ public class LoadLevel : MonoBehaviour
     {
         _currentLevel.FixUpdateCount();
     }
-    public void SetWinButton()
+
+    public int GetIndexLvl(LevelController levelController)
     {
-        if(_currentLevel.GetCountErrors().Equals(_currentLevel.fixErrors))
-            _currentLevel.SetWin();
+        IList<LevelController> levels = _levels;
+        int index = levels.IndexOf(levelController);
+        Debug.Log(index);
+        return index;
     }
 }

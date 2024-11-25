@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class UIView : MonoBehaviour
 {
-    [SerializeField] private Text _errorsText;
     [SerializeField] private int _errorsCount;
 
     private void OnEnable()
@@ -20,7 +19,8 @@ public class UIView : MonoBehaviour
 
     private void UpdateTextErrors(int fix = 0)
     {
-        _errorsText.text = $"{fix}/{LoadLevel.Instance.currentLevel.GetCountErrors()}";
+        string _text = $"{fix}/{LoadLevel.Instance.currentLevel.GetCountErrors()}";
+        Debug.Log(_text);
     }
 
 }

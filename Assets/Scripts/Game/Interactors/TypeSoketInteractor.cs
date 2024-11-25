@@ -13,7 +13,6 @@ public class TypeSoketInteractor : XRSocketInteractor
     private bool _isSetup;
     [Header("Óñëîâèÿ çàìåíû")]
     [SerializeField] private PCXRGrapInteractable _requiredÑomponent;
-    [SerializeField, Tooltip("Íóæíà ëè çàìåíà äà/íåò")] protected bool _required;
     public bool IsSetup
     {
         get
@@ -63,7 +62,7 @@ public class TypeSoketInteractor : XRSocketInteractor
     }
     public void FixSelectable(SelectEnterEventArgs selectEnterEventArgs)
     {
-        if (!_required) return;
+        if (_requiredÑomponent is null) return;
         if (_requiredÑomponent.Equals(_currentÑomponent))
         {
             Debug.Log($"asdasd {gameObject.name}");
@@ -72,7 +71,7 @@ public class TypeSoketInteractor : XRSocketInteractor
     }
     public void UnFixSelectable(SelectExitEventArgs selectExitEventArgs)
     {
-        if (!_required) return;
+        if (_requiredÑomponent is null) return;
         if (_requiredÑomponent.Equals(_currentÑomponent))
         {
             Debug.Log($"asdasd {gameObject.name}");

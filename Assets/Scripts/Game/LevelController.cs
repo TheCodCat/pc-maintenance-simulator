@@ -4,9 +4,10 @@ using UnityEngine.Events;
 public class LevelController : MonoBehaviour
 {
     public static UnityAction<int> OnFixedChange;
-    public static bool _isWin;
-    public static bool IsWin => _isWin;
+    public bool _isWin;
+    public bool IsWin => _isWin;
     [SerializeField] private TypeSoketInteractor[] _errors;
+    [SerializeField] private LevelController _openWinLvl;
     [SerializeField] private int _fixErrors;
     public int fixErrors
     {
@@ -23,16 +24,23 @@ public class LevelController : MonoBehaviour
     {
         fixErrors++;
         fixErrors = Mathf.Clamp(fixErrors,0, _errors.Length);
+        FixUpdateCount();
     }
     public void UnFixComponent()
     {
         fixErrors--;
         fixErrors = Mathf.Clamp(fixErrors, 0, _errors.Length);
+        FixUpdateCount();
     }
 
     public void FixUpdateCount()
     {
         OnFixedChange?.Invoke(fixErrors);
+        if (_fixErrors.Equals(_errors.Length))
+        {
+            Debug.Log("Победа");
+            _openWinLvl.SetWin();   
+        }
     }
     public int GetCountErrors()
     {
@@ -41,6 +49,13 @@ public class LevelController : MonoBehaviour
 
     public void SetWin()
     {
-        _isWin = true;
+        if (!_isWin)
+        {
+            Debug.Log("Уровень решен");
+            _isWin = true;
+            Debug.Log(_openWinLvl.gameObject.name);
+            GameDataController.instance.SetWinLvl(LoadLevel.Instance.GetIndexLvl(this));
+            GameDataController.instance.SaveWin();
+        }
     }
 }
