@@ -4,8 +4,6 @@ using UnityEngine.Events;
 public class LevelController : MonoBehaviour
 {
     public static UnityAction<int> OnFixedChange;
-    public bool _isWin;
-    public bool IsWin => _isWin;
     [SerializeField] private TypeSoketInteractor[] _errors;
     [SerializeField] private LevelController _openWinLvl;
     [SerializeField] private int _fixErrors;
@@ -49,13 +47,9 @@ public class LevelController : MonoBehaviour
 
     public void SetWin()
     {
-        if (!_isWin)
-        {
-            Debug.Log("Уровень решен");
-            _isWin = true;
-            Debug.Log(_openWinLvl.gameObject.name);
-            GameDataController.instance.SetWinLvl(LoadLevel.Instance.GetIndexLvl(this));
-            GameDataController.instance.SaveWin();
-        }
+        Debug.Log("Уровень решен");
+        Debug.Log(_openWinLvl.gameObject.name);
+        GameDataController.instance.SetWinLvl(LoadLevel.Instance.GetIndexLvl(this));
+        GameDataController.instance.SaveWin();
     }
 }
