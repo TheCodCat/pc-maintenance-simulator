@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,11 +63,18 @@ public class TypeSoketInteractor : XRSocketInteractor
     }
     public void FixSelectable(SelectEnterEventArgs selectEnterEventArgs)
     {
-        if (_required—omponent is null) return;
-        if (_required—omponent.Equals(_current—omponent))
+        try
         {
-            Debug.Log($"asdasd {gameObject.name}");
-            LoadLevel.Instance.currentLevel.FixComponent();
+            if (_required—omponent is null) return;
+            if (_required—omponent.Equals(_current—omponent))
+            {
+                Debug.Log($"asdasd {gameObject.name}");
+                LoadLevel.Instance.currentLevel.FixComponent();
+            }
+        }
+        catch(NullReferenceException)
+        {
+            Debug.Log(gameObject.name);
         }
     }
     public void UnFixSelectable(SelectExitEventArgs selectExitEventArgs)
