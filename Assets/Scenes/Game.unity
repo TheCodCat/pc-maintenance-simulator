@@ -2185,6 +2185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fix
       objectReference: {fileID: 0}
+    - target: {fileID: 6926824679773577165, guid: eab00ae2dc43ce748992e3f4e0e2271f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8766401374117435001, guid: eab00ae2dc43ce748992e3f4e0e2271f,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2375,6 +2380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1358535868}
   - component: {fileID: 1358535869}
+  - component: {fileID: 1358535870}
   m_Layer: 0
   m_Name: Poke Interactor
   m_TagString: Untagged
@@ -2415,7 +2421,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1358555535}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -2464,6 +2470,27 @@ MonoBehaviour:
   m_UIHoverExited:
     m_PersistentCalls:
       m_Calls: []
+--- !u!135 &1358535870
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358535867}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1358555535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4503658400482910737, guid: bab30513a7f97924183225991516c52b,
@@ -2955,7 +2982,7 @@ MonoBehaviour:
   m_PokeConfiguration:
     m_UseConstant: 1
     m_ConstantValue:
-      m_PokeDirection: 3
+      m_PokeDirection: 5
       m_InteractionDepthOffset: 0
       m_EnablePokeAngleThreshold: 1
       m_PokeAngleThreshold: 45
@@ -3066,6 +3093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701510876}
   - component: {fileID: 1701510877}
+  - component: {fileID: 1701510878}
   m_Layer: 0
   m_Name: Poke Interactor
   m_TagString: Untagged
@@ -3106,7 +3134,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1166411215}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -3155,6 +3183,27 @@ MonoBehaviour:
   m_UIHoverExited:
     m_PersistentCalls:
       m_Calls: []
+--- !u!135 &1701510878
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701510875}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1738951272
 PrefabInstance:
   m_ObjectHideFlags: 0
