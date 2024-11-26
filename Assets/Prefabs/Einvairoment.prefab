@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4290256053505624572}
   - component: {fileID: 5113590243966368111}
   - component: {fileID: 688060237788180480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3969296606241887349}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Einvairoment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,6 +241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 401eaabebaaf91745ba537204db32693,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 401eaabebaaf91745ba537204db32693,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -303,6 +308,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8089588901306145641}
     m_Modifications:
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker3
+      objectReference: {fileID: 0}
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1162362937918511674, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: _indexLevel
@@ -363,6 +378,11 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2309863280599267631, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5649272042554691254, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_StartingSelectedInteractable
@@ -383,10 +403,20 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6496622724574489087, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_Name
       value: ButtonKAnc (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8006046735376334868, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
@@ -555,6 +585,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: POLKA
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c3954a8dd1e9fd44a788dae003d5c2f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -668,14 +703,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 78aa098aa2be6ce4b9c165d1c79c45d7,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78aa098aa2be6ce4b9c165d1c79c45d7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78aa098aa2be6ce4b9c165d1c79c45d7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4375910006829877273}
   m_SourcePrefab: {fileID: 100100000, guid: 78aa098aa2be6ce4b9c165d1c79c45d7, type: 3}
+--- !u!1 &3704255846289408393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78aa098aa2be6ce4b9c165d1c79c45d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4587268893515693272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4375910006829877273
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704255846289408393}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2228417370725966487, guid: 78aa098aa2be6ce4b9c165d1c79c45d7, type: 3}
 --- !u!4 &4045351477928975155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78aa098aa2be6ce4b9c165d1c79c45d7,
@@ -690,6 +762,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8089588901306145641}
     m_Modifications:
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker1
+      objectReference: {fileID: 0}
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1846756578817279360, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
@@ -740,6 +822,11 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2309863280599267631, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5649272042554691254, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
@@ -750,10 +837,20 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6496622724574489087, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_Name
       value: ButtonKAnc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8006046735376334868, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
@@ -805,8 +902,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8006046735376334868, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1162362937918511674, guid: 10a3f10a5e67b974d8556acf0b8595a8, type: 3}
+    - {fileID: 5649272042554691254, guid: 10a3f10a5e67b974d8556acf0b8595a8, type: 3}
+    - {fileID: 1714193508498394274, guid: 10a3f10a5e67b974d8556acf0b8595a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -922,6 +1026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TABLE2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b41a89ecbf0e6cd42ab3e23b7d5037d5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b41a89ecbf0e6cd42ab3e23b7d5037d5,
         type: 3}
@@ -1041,6 +1150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3428217053474cc40b7c6b35a9b1072f,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3428217053474cc40b7c6b35a9b1072f,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1095,6 +1209,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8089588901306145641}
     m_Modifications:
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker2
+      objectReference: {fileID: 0}
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1162362937918511674, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: _indexLevel
@@ -1155,6 +1279,11 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2309863280599267631, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5649272042554691254, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_StartingSelectedInteractable
@@ -1175,10 +1304,20 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6496622724574489087, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_Name
       value: ButtonKAnc (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8006046735376334868, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
@@ -1263,7 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479e1c5bb2a6e2c458fed7a036ed231a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _indexLevel: 0
+  _indexLevel: 1
 --- !u!1001 &8425478479155691917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1351,6 +1490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TABLE1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0bc87230056889043b30e3d990e4449d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0bc87230056889043b30e3d990e4449d,
         type: 3}
@@ -1463,6 +1607,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DOOR
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef2e899f68c1c1548ac42c7334cf87bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1482,6 +1631,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8089588901306145641}
     m_Modifications:
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker5
+      objectReference: {fileID: 0}
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1162362937918511674, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: _indexLevel
@@ -1542,15 +1701,30 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2309863280599267631, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5649272042554691254, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_StartingSelectedInteractable
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6496622724574489087, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_Name
       value: ButtonKAnc (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8006046735376334868, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
@@ -1701,6 +1875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8938a7f5fc48a7c4a923d21785b04df1,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8938a7f5fc48a7c4a923d21785b04df1,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1743,6 +1922,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8089588901306145641}
     m_Modifications:
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSticker4
+      objectReference: {fileID: 0}
+    - target: {fileID: 460383544053709500, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1162362937918511674, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: _indexLevel
@@ -1803,6 +1992,11 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2309863280599267631, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5649272042554691254, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_StartingSelectedInteractable
@@ -1823,10 +2017,20 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6496622724574489087, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
       propertyPath: m_Name
       value: ButtonKAnc (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228525591446166190, guid: 10a3f10a5e67b974d8556acf0b8595a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8006046735376334868, guid: 10a3f10a5e67b974d8556acf0b8595a8,
         type: 3}
