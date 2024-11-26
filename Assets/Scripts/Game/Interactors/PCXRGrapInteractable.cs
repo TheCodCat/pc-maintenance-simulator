@@ -40,7 +40,7 @@ public class PCXRGrapInteractable : XRGrabInteractable
     public void OnSelected(SelectEnterEventArgs selectEnterEventArgs)
     {
         _audioSource.clip = _audioClipSelect;
-        _audioSource.Play();
+        _audioSource?.Play();
     }
     public void OnDeSelected(SelectExitEventArgs selectExitEventArgs)
     {
@@ -59,7 +59,7 @@ public class PCXRGrapInteractable : XRGrabInteractable
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                _panel.LookAt(_target);
+                _panel?.LookAt(_target);
                 await UniTask.Yield();
             }
         }

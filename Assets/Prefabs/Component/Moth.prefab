@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8573367428928513570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25,19 +25,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2472913628088891469}
-  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.026}
+  m_LocalRotation: {x: 0.70710707, y: -0.00000011920929, z: 0.00000011920929, w: -0.7071066}
+  m_LocalPosition: {x: 0, y: 0, z: 0.245}
   m_LocalScale: {x: 0.001, y: 0.0010000002, z: 0.0009999999}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5187164115751813962}
   m_Father: {fileID: 8952233146004557628}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.397, y: -0.073}
+  m_AnchoredPosition: {x: 0.025, y: 0.062}
   m_SizeDelta: {x: 400, y: 500}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!223 &9091331862357482158
 Canvas:
   m_ObjectHideFlags: 0
@@ -366,6 +366,7 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _typePCSocket: 9
+  _particleSystem: {fileID: 0}
   "_lastSelectable\u0421omponent": {fileID: 1660195668809663453}
   "_required\u0421omponent": {fileID: 0}
 --- !u!65 &8459348059392065903
@@ -507,6 +508,7 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _typePCSocket: 3
+  _particleSystem: {fileID: 0}
   "_lastSelectable\u0421omponent": {fileID: 0}
   "_required\u0421omponent": {fileID: 0}
 --- !u!65 &5274101251511348832
@@ -648,6 +650,7 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _typePCSocket: 3
+  _particleSystem: {fileID: 0}
   "_lastSelectable\u0421omponent": {fileID: 0}
   "_required\u0421omponent": {fileID: 0}
 --- !u!65 &5721304350181343090
@@ -1272,6 +1275,7 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _typePCSocket: 0
+  _particleSystem: {fileID: 0}
   "_lastSelectable\u0421omponent": {fileID: 0}
   "_required\u0421omponent": {fileID: 0}
 --- !u!65 &3888044396207784771
@@ -1504,6 +1508,7 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _typePCSocket: 1
+  _particleSystem: {fileID: 0}
   "_lastSelectable\u0421omponent": {fileID: 0}
   "_required\u0421omponent": {fileID: 0}
 --- !u!4 &5956819939721628189 stripped
@@ -1627,6 +1632,7 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _typePCSocket: 2
+  _particleSystem: {fileID: 0}
   "_lastSelectable\u0421omponent": {fileID: 0}
   "_required\u0421omponent": {fileID: 0}
 --- !u!65 &6693939039353383613

@@ -9,6 +9,7 @@ public class TypeSoketInteractor : XRSocketInteractor
 {
     [Header("Тег присоединения")]
     [SerializeField] private TypePCSocket _typePCSocket;
+    [SerializeField] private ParticleSystem _particleSystem;
     [Header("Зависящие компоненты")]
     [SerializeField, Tooltip("Компонент зависит от выбранного компонента")] private TypeSoketInteractor _lastSelectableСomponent;
     private bool _isSetup;
@@ -46,8 +47,8 @@ public class TypeSoketInteractor : XRSocketInteractor
     public void onSelected(SelectEnterEventArgs selectEnterEventArgs)
     {
         IsSetup = true;
-
-        if(selectEnterEventArgs.interactableObject.transform.TryGetComponent(out IActivated component))
+        _particleSystem?.Play();
+        if (selectEnterEventArgs.interactableObject.transform.TryGetComponent(out IActivated component))
         {
             component.Activate();
         }
