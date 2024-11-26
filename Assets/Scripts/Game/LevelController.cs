@@ -22,13 +22,11 @@ public class LevelController : MonoBehaviour
     {
         fixErrors++;
         fixErrors = Mathf.Clamp(fixErrors,0, _errors.Length);
-        FixUpdateCount();
     }
     public void UnFixComponent()
     {
         fixErrors--;
         fixErrors = Mathf.Clamp(fixErrors, 0, _errors.Length);
-        FixUpdateCount();
     }
 
     public void FixUpdateCount()
