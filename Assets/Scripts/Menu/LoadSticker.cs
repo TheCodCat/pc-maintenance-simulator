@@ -69,4 +69,34 @@ public class LoadSticker : MonoBehaviour
             return;
         }
     }
+
+    //Выход
+    public async void StartExitSticker(SelectEnterEventArgs selectEnterEventArgs)
+    {
+        _cancellationTokenSource = new CancellationTokenSource();
+        _cancellationToken = _cancellationTokenSource.Token;
+        Debug.Log("Начинаю выход из игры");
+        await UniTask.Delay(TimeSpan.FromSeconds(3f));
+
+        await StickerExitAsync(_cancellationToken);
+    }
+    public void StopExitSticker(SelectExitEventArgs selectExitEventArgs)
+    {
+        Debug.Log("Отмена");
+        _cancellationTokenSource.Cancel();
+    }
+
+    public async UniTask StickerExitAsync(CancellationToken token)
+    {
+        if (!token.IsCancellationRequested)
+        {
+            await UniTask.Yield();
+            Application.Quit();
+        }
+        else
+        {
+            _cancellationTokenSource.Dispose();
+            return;
+        }
+    }
 }

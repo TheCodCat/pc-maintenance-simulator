@@ -1,10 +1,11 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class LevelController : MonoBehaviour
 {
-    public static UnityAction<int> OnFixedChange;
     [SerializeField] private TypeSoketInteractor[] _errors;
+    [SerializeField] private TypeSoketInteractor[] _allSoket;
     [SerializeField] private LevelController _openWinLvl;
     [SerializeField] private int _fixErrors;
     [Header("Звук выигрыша")]
@@ -33,8 +34,8 @@ public class LevelController : MonoBehaviour
 
     public void FixUpdateCount()
     {
-        OnFixedChange?.Invoke(fixErrors);
-        if (_fixErrors.Equals(_errors.Length))
+        int setupCount = _allSoket.Where(i => i.IsSetup).Count();
+        if (_fixErrors.Equals(_errors.Length) && _allSoket.Length.Equals(setupCount))
         {
             Debug.Log("Победа");
             _openWinLvl?.SetWin();
