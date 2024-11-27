@@ -367,7 +367,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_SelectActionTrigger: 2
-  m_HideControllerOnSelect: 0
+  m_HideControllerOnSelect: 1
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
   m_PlayAudioClipOnSelectEntered: 0
@@ -418,13 +418,10 @@ GameObject:
   - component: {fileID: 1922659039233768390}
   - component: {fileID: 5209216057495143523}
   - component: {fileID: 8521576296516557755}
-  - component: {fileID: 3052487568731634509}
-  - component: {fileID: 1077834513817371423}
-  - component: {fileID: 6108450889432882046}
   - component: {fileID: 3410903465447214957}
-  - component: {fileID: 1321086883178483333}
   - component: {fileID: 7629209708444344913}
   - component: {fileID: 7377271506981719108}
+  - component: {fileID: 6085560861207870464}
   m_Layer: 6
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -446,6 +443,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7407725683496110051}
+  - {fileID: 6092576771079092326}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &5209216057495143523
@@ -479,80 +477,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &3052487568731634509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192952544956470851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LocomotionProvider: {fileID: 6108450889432882046}
-  m_MinHeight: 0
-  m_MaxHeight: Infinity
---- !u!114 &1077834513817371423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192952544956470851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Timeout: 10
-  m_XROrigin: {fileID: 5209216057495143523}
---- !u!114 &6108450889432882046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192952544956470851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 1077834513817371423}
-  m_MoveSpeed: 2
-  m_EnableStrafe: 1
-  m_EnableFly: 0
-  m_UseGravity: 1
-  m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 3961107169157646616}
-  m_LeftHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: fb52fd1a-1328-4f8c-95b7-25078d87dd97
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  m_RightHandMoveAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: c0facbf7-c7e9-4372-8ff3-ce7232838f24
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
 --- !u!143 &3410903465447214957
 CharacterController:
   m_ObjectHideFlags: 0
@@ -579,20 +503,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1321086883178483333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2192952544956470851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Timeout: 10
-  m_XROrigin: {fileID: 5209216057495143523}
 --- !u!114 &7629209708444344913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,7 +528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_System: {fileID: 1077834513817371423}
+  m_System: {fileID: 27158313685958709}
   m_TurnAmount: 45
   m_DebounceTime: 0.5
   m_EnableTurnLeftRight: 1
@@ -649,6 +559,21 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+--- !u!114 &6085560861207870464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192952544956470851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocomotionProvider: {fileID: 3460343402806305486}
+  m_MinHeight: 0
+  m_MaxHeight: Infinity
 --- !u!1 &3096247495060449766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +949,97 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4863241332262823398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6092576771079092326}
+  - component: {fileID: 3460343402806305486}
+  - component: {fileID: 27158313685958709}
+  m_Layer: 6
+  m_Name: Move
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6092576771079092326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863241332262823398}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1922659039233768390}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3460343402806305486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863241332262823398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 27158313685958709}
+  m_MoveSpeed: 1
+  m_EnableStrafe: 1
+  m_EnableFly: 0
+  m_UseGravity: 1
+  m_GravityApplicationMode: 1
+  m_ForwardSource: {fileID: 3961107169157646616}
+  m_LeftHandMoveAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Move
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 728d8a4c-3678-443a-a1e0-a3dbe0973853
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  m_RightHandMoveAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Hand Move
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: b968fe83-26b3-416b-9eef-5c4e13ba680b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+--- !u!114 &27158313685958709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863241332262823398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Timeout: 10
+  m_XROrigin: {fileID: 5209216057495143523}
 --- !u!1 &4873983095298443966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1339,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4
-  m_AttachTransform: {fileID: 7300507952548446114}
+  m_AttachTransform: {fileID: 5499734090218083483}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1604,7 +1620,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_SelectActionTrigger: 2
-  m_HideControllerOnSelect: 0
+  m_HideControllerOnSelect: 1
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
   m_PlayAudioClipOnSelectEntered: 0
