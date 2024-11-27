@@ -35,6 +35,12 @@ public class LevelController : MonoBehaviour
     public void FixUpdateCount()
     {
         int setupCount = _allSoket.Where(i => i.IsSetup).Count();
+        var setuplist = _allSoket.Where(i => i.IsSetup);
+        foreach (var i in setuplist)
+        {
+            Debug.Log(i.gameObject);
+        }
+        Debug.Log(setupCount);
         if (_fixErrors.Equals(_errors.Length) && _allSoket.Length.Equals(setupCount))
         {
             Debug.Log("Победа");
