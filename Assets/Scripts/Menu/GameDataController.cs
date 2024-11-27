@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.IO.Pipes;
 
 public class GameDataController : MonoBehaviour
 {
@@ -25,17 +26,37 @@ public class GameDataController : MonoBehaviour
     }
     public void SaveWin()
     {
+        string path = string.Empty;
+#if UNITY_EDITOR
+        path = "C:/Users/Public/saveload.gd";
+#endif
+#if !UNITY_EDITOR
+        path = $"{Application.persistentDataPath}/saveload.gd";
+#endif
+
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream fileStream = File.Create($"C:/Users/Public/saveload.gd");
-        bf.Serialize(fileStream, SavesOpenKey);
-        fileStream.Close();
+        FileStream fileStream;
+
+        using (fileStream = File.Create(path))
+        {
+            bf.Serialize(fileStream, SavesOpenKey);
+            fileStream.Close();
+        }
     }
     public bool[] LoadWin()
     {
+        string path = string.Empty;
+#if UNITY_EDITOR
+        path = "C:/Users/Public/saveload.gd";
+#endif
+#if !UNITY_EDITOR
+        path = $"{Application.persistentDataPath}/saveload.gd";
+#endif
+
         if (File.Exists($"C:/Users/Public/saveload.gd"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream fileStream = File.Open($"C:/Users/Public/saveload.gd", FileMode.Open);
+            FileStream fileStream = File.Open(path, FileMode.Open);
             bool[] bools = (bool[])bf.Deserialize(fileStream);
             fileStream.Close();
             return bools;

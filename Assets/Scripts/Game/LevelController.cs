@@ -7,6 +7,8 @@ public class LevelController : MonoBehaviour
     [SerializeField] private TypeSoketInteractor[] _errors;
     [SerializeField] private LevelController _openWinLvl;
     [SerializeField] private int _fixErrors;
+    [Header("Звук выигрыша")]
+    [SerializeField] private AudioSource _source;
     public int fixErrors
     {
         get
@@ -35,7 +37,8 @@ public class LevelController : MonoBehaviour
         if (_fixErrors.Equals(_errors.Length))
         {
             Debug.Log("Победа");
-            _openWinLvl.SetWin();   
+            _openWinLvl?.SetWin();
+            _source?.Play();
         }
     }
     public int GetCountErrors()
