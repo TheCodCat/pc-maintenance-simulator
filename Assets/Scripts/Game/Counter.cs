@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -26,6 +23,9 @@ public class Counter : MonoBehaviour
         _CountErrorstext.text = LoadLevel.Instance.currentLevel.GetCountErrors().ToString();
 
         string _text = $"{_fixCount}/{LoadLevel.Instance.currentLevel.GetCountErrors()}";
+
+        LoadLevel.Instance.currentLevel.FixUpdateCount();
+
         Debug.Log(_text);
     }
 
