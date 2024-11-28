@@ -56,7 +56,7 @@ public class LevelController : MonoBehaviour
     public void SetWin()
     {
         Debug.Log("Уровень решен");
-        Debug.Log(_openWinLvl.gameObject.name);
+        Debug.Log(_openWinLvl?.gameObject.name);
         GameDataController.instance.SetWinLvl(LoadLevel.Instance.GetIndexLvl(this));
         GameDataController.instance.SaveWin();
     }
